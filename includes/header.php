@@ -33,6 +33,7 @@ if (!isset($pageTitle))
 	}
 ?>
 		<title>SteamLUG <?php echo $pageTitle; ?></title>
+		<link rel="stylesheet" href="/css/milk.min.css" type="text/css" />
 		<link rel="stylesheet" href="/css/style.css" type="text/css" />
 		<script>
 			var serverTime = <?php echo microtime(true); ?>;
@@ -139,6 +140,9 @@ if (!isset($pageTitle))
 	}
 ?>
 
+		<div id="navheader">
+			<a href="http://steamcommunity.com/groups/steamlug/">LOGO?</a>
+		</div>
 		<nav>
 			<ul>
 				<li class = '<?php echo $newsPage; ?>'><a href = '/news'>News</a></li>

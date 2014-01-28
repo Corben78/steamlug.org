@@ -1,11 +1,3 @@
-@font-face
-{
-	font-family: 'OrbitronMedium';
-	src: url('/css/Orbitron-fontfacekit/orbitron-medium-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
 *
 {
 	margin: 0;
@@ -14,20 +6,28 @@
 
 body
 {
-	background: #262627;
-	color: #959595;
-	font-size: 12px;
-	font-family: Arial,Helvetica,sans-serif;
-	text-shadow: 1px 1px 1px #000000;
-	background-image: url("/images/noise4.png");
+	background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.05) 100%);
+	color: #353535;
 }
 
-
+#navheader {
+	display: block;
+	padding: 45px;
+	padding-left: 120px;
+	font-size: 40px;
+	background: url("/images/steamlogo.svg") no-repeat scroll left 15px top 5px / 100px auto rgba(0,0,0,0);
+	background-color: #000;
+}
 nav
 {
-	background: #262627;
-	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5), 0 100px 50px -10px #3D3D3D inset;
+	background: #2B2B2C;
 	text-align: center;
+	border-bottom: 1px solid #3D3D3D;
+}
+
+nav a:hover
+{
+	color: #FFF;
 }
 
 nav ul
@@ -46,9 +46,6 @@ nav ul ul
 nav ul li:hover ul
 {
 	display: block !important;
-	background: url("/images/noise4.png") repeat scroll 0 0 #303030;
-	border-radius: 0 0 10px 10px;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 	z-index: 99;
 }
 
@@ -62,13 +59,14 @@ nav ul ul li
 {
 	display: block;
 	text-align: left;
+	background: #393939;
+	width: 200px;
 }
 
 nav ul ul li a
 {
-	font-size: 14px;
-	line-height: 40px;
-	padding: 0 1.25em;
+	line-height: 25px;
+	padding: 4px 25px;
 }
 
 nav ul li
@@ -78,16 +76,15 @@ nav ul li
 
 nav ul li a
 {
+	color: #EBEBEB;
 	display: block;
-	font-family: 'OrbitronMedium', Arial, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 nav > ul > li > a
 {
-	font-variant: small-caps;
-	padding: 26px 1.25em 0;
-	font-size: 1.5em;
-	line-height: 80px;
+	padding: 4px 25px;
+	line-height: 25px;
 	border-left: 1px solid transparent;
 	border-right: 1px solid transparent;
 }
@@ -96,8 +93,8 @@ nav > ul > li > a
 nav ul li:hover > a,
 nav ul li.current > a
 {
-	text-shadow: 0 0 5px white;
 	text-decoration: none;
+	background: #323232;
 }
 
 nav > ul > li:hover > a,
@@ -106,7 +103,6 @@ nav > ul > li.current > a
 	background-color: #393939;
 	border-left: 1px solid #3D3D3D;
 	border-right: 1px solid #3D3D3D;
-	background-image: url("/images/noise4.png");
 }
 
 nav img
@@ -116,10 +112,9 @@ nav img
 
 header h1
 {
-	font-size: 2em;
+	color: #000;
 	text-align: center;
-	margin-top: 3em;
-	margin-bottom: 0em;
+	margin: 20px 0;
 }
 
 h1,
@@ -127,46 +122,38 @@ h2,
 h3
 {
 	color: #529CDE;
-	font-family: 'OrbitronMedium', Arial, sans-serif;
-	font-weight: normal;
 }
 
 article
 {
 	text-align: justify;
 	margin: 60px auto;
-	width: 600px;
-	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
+	min-width: 600px;
+	max-width: 800px;
 }
 
 article#nextevent
 {
 	background-color: #3D4655;
-	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5), -100px -300px 100px -200px #2B2B2B inset;
-	padding: 10px;
-	border-radius: 30px;
-	text-align: center;
-	min-width: 300px;
-	max-width: 500px;
+	min-width: 600px;
+	color: #FFF;
+	max-width: 800px;
+	padding-bottom: 10px;
 }
 
 article#nextevent h1
 {
 	margin: 5px 0 10px 0;
-	color: #272727;
-	text-shadow: 1px 1px #606060;
 }
 
 article#nextevent h2
 {
-	font-family: Arial,Helvetica,sans-serif;
 	font-weight: bold;
 	color: white;
 }
 
 article#nextevent img.eventImage
 {
-	box-shadow: 0 0 15px 1px rgba(0,0,0, 0.5);
 	border-radius: 10px;
 }
 
@@ -188,20 +175,15 @@ article#nextevent span
 
 div.shadow
 {
-	border-top: 1px solid #35465E;
-	border-bottom: 1px solid #35465E;
-	padding: 1px 0;
-	background-color: #262627;
-	margin: 0 -20px;
-	width: 640px;
-	background-image: url("/images/noise4.png");
+	padding-bottom: 10px;
+	background-color: #FFF;
 }
 
 article p,
 article dl,
 article ul
 {
-	margin: 1em 30px;
+	margin: 15px 30px;
 }
 
 article blockquote
@@ -237,8 +219,12 @@ article dl dt:after
 
 article h1
 {
-	font-size: 1.8em;
-	margin: 0.5em 30px;
+	margin: 0;
+	font-size: 20px;
+	padding: 0 20px;
+	background: #222;
+	border-bottom: 1px solid #3D3D3D;
+	box-shadow: 0 50px 50px -50px rgba(0, 0, 0, 0.5) inset, 0 0 0 0 rgba(0, 0, 0, 0.5);
 }
 
 article h2
@@ -256,6 +242,11 @@ article audio
 article h1 a
 {
 	color: #529CDE;
+}
+
+article h1 a:hover {
+		text-decoration: none;
+		color: #307ABC;
 }
 
 article ul,
@@ -281,18 +272,21 @@ article ul
 
 article .eventList
 {
+	margin: 15px 30px;
 	list-style-type: none;
 }
-
+ul.eventList li {
+		margin: 0;
+}
 a
 {
 	text-decoration: none;
-	color: #EBEBEB;
+	color: #529CDE;
 }
 
 audio
 {
-	width: 580px;
+	width: 740px;
 	height: 40px;
 }
 
@@ -375,7 +369,6 @@ footer .copy
 {
 	font-size: 15px;
 	font-weight: bold;
-	color: #EBEBEB
 }
 
 .eventWrap
@@ -392,14 +385,14 @@ footer .copy
 
 .eventWrap div.eventCommentWrap
 {
-	width: 366px;
+	width: 466px;
 	margin-left: 20px;
 	padding-top: 2px;
 }
 
 .eventComments
 {
-	color: #BDBDBD;
+		color: #777;
 }
 
 .online
@@ -409,17 +402,13 @@ footer .copy
 
 .counterDigit
 {
-	font-family: 'OrbitronMedium', Arial, sans-serif;
 	background-color: #303030;
 	display: inline-block;
-	width: 1.5em;
+	width: 25px;
 	text-align: center;
-	line-height: 1.25em;
-	padding-top: 4px;
 	text-shadow: none;
 	border-radius: 3px;
 	text-align: center;
-	box-shadow: 0 -10px 16px -10px #000000 inset, 0px 0px 2px 1px rgba(0,0,0,0.5);
 	margin-top: 3px;
 }
 
@@ -431,28 +420,22 @@ footer .copy
 
 .serverlink
 {
-	font-family: 'OrbitronMedium', Arial, sans-serif;
 	text-align:center;
+	margin: 0;
 }
 
 .attribution
 {
+
 	font-style: italic;
-	margin-left: 40px;
+	padding-left: 20px;
+	color: #595959;
+	margin: 0;
 }
 
 #groupLink
 {
-	margin-top: 20px;
-	background: url("/images/noise4.png") repeat scroll 0 0 #262627;
-	border-radius: 0 10px 10px 0;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-	position: fixed;
-	display: block;
-	overflow: hidden;
-	min-height: 127px;
-	border: 1px solid #3D3D3D;
-	border-left: none;
+		display: none;
 }
 
 #groupLink img
@@ -463,26 +446,10 @@ footer .copy
 	transition: margin-left 0.25s linear;
 }
 
-#groupLink:hover img
-{
-	margin-left: 220px;
-}
-
-#groupLink p
-{
-	position: absolute;
-	display: block;
-	width: 200px;
-	padding: 2em 1em;
-	vertical-align: top;
-	z-index: 4;
-}
 
 #betaStamp
 {
-	position: fixed;
-	right: 0;
-	top: 0;
+		display: none;
 }
 
 .detailLink
@@ -533,11 +500,9 @@ span.right
 
 table.tablesorter
 {
+		font-size: 14px;
 	border-spacing: 0;
-	margin: 50px -100px;
-	width: 840px;
-	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
-	font-size: 12px;
+	width: 800px;
 }
 
 table.tablesorter img
@@ -568,7 +533,6 @@ span.offline
 table.tablesorter thead tr th,
 table.tablesorter tfoot tr th
 {
-	background-color: #3D4655;
 	padding: 5px;
 }
 
@@ -594,7 +558,7 @@ table.tablesorter tbody td
 
 table.tablesorter tbody tr:nth-child(even)
 {
-	background-color: #262626;
+	background-color: #CFCFCF;
 }
 
 table.tablesorter thead th.headerSortUp
@@ -656,7 +620,7 @@ time:target
 
 .nostamp
 {
-	text-indent: 0 !important;
+	text-indent: 10px !important;
 }
 
 .nostamp p
