@@ -21,7 +21,8 @@ body
 nav
 {
 	background: #2B2B2C;
-	text-align: center;
+	padding-left: 60px;
+	min-width: 800px;
 	border-bottom: 1px solid #3D3D3D;
 }
 
@@ -90,6 +91,7 @@ nav > ul > li > a
 }
 
 
+nav ul li:focus > a,
 nav ul li:hover > a,
 nav ul li.current > a
 {
@@ -127,9 +129,8 @@ h3
 article
 {
 	text-align: justify;
-	margin: 60px auto;
+	margin: 30px 60px 60px 60px;
 	min-width: 600px;
-	max-width: 800px;
 }
 
 article#nextevent
@@ -137,7 +138,6 @@ article#nextevent
 	background-color: #3D4655;
 	min-width: 600px;
 	color: #FFF;
-	max-width: 800px;
 	padding-bottom: 10px;
 }
 
@@ -284,12 +284,6 @@ a
 	color: #529CDE;
 }
 
-audio
-{
-	width: 740px;
-	height: 40px;
-}
-
 a:hover
 {
 	text-decoration: underline;
@@ -385,11 +379,13 @@ footer .copy
 
 .eventWrap div.eventCommentWrap
 {
-	width: 466px;
 	margin-left: 20px;
 	padding-top: 2px;
 }
-
+div.eventDate
+{
+	float: right;
+}
 .eventComments
 {
 		color: #777;
@@ -430,7 +426,7 @@ footer .copy
 	font-style: italic;
 	padding-left: 20px;
 	color: #595959;
-	margin: 0;
+	margin: 12px 0 0 0;
 }
 
 #groupLink
@@ -500,9 +496,9 @@ span.right
 
 table.tablesorter
 {
-		font-size: 14px;
+	font-size: 14px;
 	border-spacing: 0;
-	width: 800px;
+	width: 100%;
 }
 
 table.tablesorter img
@@ -571,11 +567,6 @@ table.tablesorter thead th.headerSortDown
 	background-image: url('/images/desc.gif');
 }
 
-table.tablesorter thead th.headerSortDown,
-table.tablesorter thead th.headerSortUp
-{
-	background-color: #3D4655;
-}
 
 time
 {

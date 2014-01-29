@@ -139,7 +139,7 @@ foreach ($data['events'] as $event)
 		$eventString .= "\t\t\t\t\t<div class = 'eventCommentWrap'><a class = 'eventName' href = '" . $event['url'] . "' >" . $event['title'] . "</a><br>";
 		$eventString .= ($event['comments'] > "0" ? "\t\t\t\t\t<a class = 'eventComments' href = '" . $event['url'] . "' >" . $event['comments'] . " " . ($event['comments'] == "1" ? "comment.." : "comments..") . "</a>\t" : "");
 		$eventString .= "\t\t\t\t\t</div>";
-		$eventString .= "\t\t\t\t\t<div><span class = 'eventDate' >" . $event['date'] . " " . $event['time'] . " " . $event['tz'] . "</span></div>\n";
+		$eventString .= "\t\t\t\t\t<div class='eventDate'><span class = 'eventDate' >" . $event['date'] . " " . $event['time'] . " " . $event['tz'] . "</span></div>\n";
 		$eventString .= "\t\t\t\t</div>";
 		$eventString .= "\t\t\t</li>\n";
 		echo $eventString;
